@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <h1> NIVELES DE INUNDACION DE LOS ULTIMOS AÑOS EN HOUSTON!!!</h1>
+    <h1> NIVELES DE INUNDACION DE LOS ULTIMOS 3 AÑOS EN HOUSTON!!!</h1>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.theme.min.css">
@@ -29,20 +29,23 @@
 
     </style>
 </head>
-
-<img src="flood1.jpg" alt="Ejemplo">
-
+<p1> En el mapa se observa las zonas más afectadas por inundaciones ...</p1>
+<img src="flood1.JPG" alt="Ejemplo">
 <div id="LineChart"></div>
 <body>
+<p2> Se evidencia un comportamiento irregular en las zonas a través de los años frente a las inundaciones.
+Se logra comparar fácilmente que la zona occidental ha mejorado su comportamiento a través de los años, en contra parte la zona oriental es todo lo contrario....
+</p2>
 <script>
   var lineChart = dex.charts.c3.LineChart({
     'parent': '#LineChart',
     'csv': new dex.csv(['HISTORIAL INUNDACIONES', 'NORTE', 'SUR', 'OCCIDENTE', 'OESTE', 'CENTRO'],
       dex.datagen.randomIndexedMatrix({
         'rows': 5,
-        'columns': 9,
+        'columns': 6,
         'min': 0,
         'max': 15,
+        'step':1,
       }))
   }).render();
 </script>
